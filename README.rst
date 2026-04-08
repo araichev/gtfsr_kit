@@ -1,21 +1,20 @@
 GTFSR Kit
 *********
-.. image:: https://travis-ci.org/mrcagney/gtfrs_kit.svg?branch=master
-    :target: https://travis-ci.org/mrcagney/gtfsr_kit
+.. image:: https://github.com/araichev/gtfsr_kit/actions/workflows/test.yml/badge.svg
 
-GTFSR Kit is a tiny Python 3.8+ library to process `General Transit Feed Specification Realtime (GTFSR) data <https://developers.google.com/transit/gtfs-realtime/reference>`_.
+GTFSR Kit is a tiny Python 3.10+ library to process `General Transit Feed Specification Realtime (GTFSR) data <https://developers.google.com/transit/gtfs-realtime/reference>`_.
 It does some simple things like read and write Protocol Buffer or JSON feed files.
 It also does some complex things like extract and combine delays into Pandas DataFrames.
 
 
 Installation
 ============
-Do ``poetry add gtfsr_kit``.
+Install from PyPI, e.g. via ``uv add gtfsr_kit``.
 
 
 Examples
 ========
-See the Jupyter notebook at ``notebooks/examples.ipynb``.
+See the Marimo notebook at ``notebooks/examples.py``.
 
 
 Notes
@@ -29,9 +28,24 @@ Authors
 ========
 - Alex Raichev  (2016-06)
 
-
 Changelog
-==========
+=========
+
+8.0.0, 2026-04-08
+-----------------
+- Rewrote GTFS-Realtime feed I/O helpers for clearer control flow and more
+  consistent UTC timestamp handling.
+- Updated the module for Pandas 3 style where appropriate, including use of
+  ``pd.col()`` in DataFrame transformations.
+- Simplified local typing by removing variable annotations while keeping
+  function parameter type hints.
+- Improved delay extraction and combination logic, including deterministic
+  handling of duplicate trip-stop delay records.
+- Hardened service-window and timezone handling for realtime feed matching.
+- Refined delay interpolation logic and validation for required columns.
+- Improved docstrings.
+- Improved tests.
+- Updated dependencies.
 
 7.0.1, 2022-07-20
 -----------------
