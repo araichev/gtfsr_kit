@@ -1,6 +1,6 @@
 [project]
 name = "gtfsr-kit"
-version = "7.0.1"
+version = "8.0.0"
 description = "A Python library to process General Transit Feed Specification Realtime (GTFSR) data"
 requires-python = ">=3.10"
 license = "MIT"
