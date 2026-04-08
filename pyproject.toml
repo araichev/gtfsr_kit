@@ -1,23 +1,40 @@
-[tool.poetry]
-name = "gtfsr_kit"
+[project]
+name = "gtfsr-kit"
 version = "7.0.1"
-description = "A Python 3.8+ library to process General Transit Feed Specification Realtime (GTFSR) data"
-authors = ["Alex Raichev <araichev@mrcagney.com>"]
+description = "A Python library to process General Transit Feed Specification Realtime (GTFSR) data"
+requires-python = ">=3.10"
 license = "MIT"
-
-[tool.poetry.dependencies]
-python = ">=3.8, <4.0"
-gtfs-realtime-bindings = ">=0.0.6"
-protobuf = "^3.20"
-gtfs-kit = ">=5.0.2"
-
-[tool.poetry.dev-dependencies]
-jupyter = ">=1.0.0"
-pytest = ">=6.2.0"
-black = ">=20.8b1"
-pre-commit = ">=2.9.3"
-Sphinx = ">=3.3.1"
+authors = [
+    { name = "Alex Raichev", email = "araichev@mrcagney.com" },
+]
+dependencies = [
+    "gtfs-realtime-bindings>=0.0.6",
+    "protobuf>=3.20",
+    "gtfs-kit>=5.0.2",
+]
 
 [build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "pytest>=6.2.0",
+    "pre-commit>=2.9.3",
+    "Sphinx>=3.3.1",
+    "pre-commit-uv>=4.2.1",
+    "ruff>=0.15.9",
+    "marimo>=0.22.5",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["gtfsr_kit"]
+
+[tool.ruff]
+line-length = 90
+exclude = ["notebooks/*.py"]
+
+[tool.ruff.lint]
+select = ["E", "F"]
+ignore = ["E501", "E731", "F401", "F403"]
+
