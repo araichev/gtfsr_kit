@@ -2,7 +2,7 @@ GTFSR Kit
 *********
 .. image:: https://github.com/araichev/gtfsr_kit/actions/workflows/test.yml/badge.svg
 
-GTFSR Kit is a tiny Python 3.10+ library to process `General Transit Feed Specification Realtime (GTFSR) data <https://developers.google.com/transit/gtfs-realtime/reference>`_.
+GTFSR Kit is a tiny Python 3.11+ library to process `General Transit Feed Specification Realtime (GTFSR) data <https://developers.google.com/transit/gtfs-realtime/reference>`_.
 It does some simple things like read and write Protocol Buffer or JSON feed files.
 It also does some complex things like extract and combine delays into Pandas DataFrames.
 
@@ -30,6 +30,10 @@ Authors
 
 Changelog
 =========
+
+8.0.1, 2026-04-08
+-----------------
+- Dropped Python 3.10, because it doesn't support Pandas 3.
 
 8.0.0, 2026-04-08
 -----------------
