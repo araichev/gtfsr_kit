@@ -1,3 +1,12 @@
+[!IMPORTANT]
+
+**This repository has moved to Codeberg, because Github is deteriorating**.
+
+Development continues at **https://codeberg.org/araichev/gtfsr_kit**, so please file issues, pull requests, etc. there.
+This GitHub repository is archived.
+
+---
+
 GTFSR Kit
 *********
 .. image:: https://github.com/araichev/gtfsr_kit/actions/workflows/test.yml/badge.svg
